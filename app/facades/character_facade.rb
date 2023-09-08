@@ -3,11 +3,12 @@ class CharacterFacade
     service = AvatarService.new
     raw_characters = service.characters
     raw_characters.map do |raw_character|
-      require 'pry'; binding.pry
-      Character.new(title: raw_movie[:title], 
-                overview: raw_movie[:overview], 
-                vote_average: raw_movie[:vote_average], 
-                id: raw_movie[:id])
+      Character.new(name: raw_character[:name], 
+                    allies: raw_character[:allies], 
+                    enemies: raw_character[:enemies], 
+                    affiliation: raw_character[:affiliation], 
+                    photo_url: raw_character[:photoUrl], 
+                    id: raw_character[:_id])
     end
   end
 end
