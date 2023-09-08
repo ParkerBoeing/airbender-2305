@@ -1,6 +1,7 @@
 <h1>Results:</h1>
 <p> Total character count: <%= @characters.count %> </p>
 <% @characters.first(25).each do |character| %>
+<div id=<%= character.id %>>
 <%= image_tag "#{character.photo_url}", alt: "Character poster" %>
  <p>Name: <%= character.name %></p>
  <p>ID: <%= character.id %></p>
@@ -8,4 +9,5 @@
  <p>Allies: <%= character.allies %></p>
  <p>Affiliation: <%= character.affiliation %></p>
  <p>-----------------------------------------</p>
+ </div>
 <% end %>
