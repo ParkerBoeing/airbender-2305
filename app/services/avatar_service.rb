@@ -1,6 +1,6 @@
 class AvatarService
   def characters(query)
-    get_url("api/v1/characters?affiliation=#{query}")
+    get_url("api/v1/characters?affiliation=#{query}&perPage=20&page=1-20")
   end
 
   def get_url(url)
